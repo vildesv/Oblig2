@@ -59,7 +59,7 @@ function valgtStolpe(barNo) {
 
  function leggTilStolpe() {
 
- 
+    
 
     updateView()
  }
@@ -67,12 +67,13 @@ function valgtStolpe(barNo) {
  function endreStolpe() {
 
 
+
     updateView()
  }
 
  function fjernStolpe() {
 
-
+    
 
     updateView()
  }
