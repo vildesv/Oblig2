@@ -32,7 +32,7 @@ function valgtStolpe(barNo) {
      }
  
      else {
-         alert("STOPP");
+         alert("Husk å velge en verdi før du trykker på knappen.");
      }
      
      /* updateView(); */
