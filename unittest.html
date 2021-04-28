@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Unit tester</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.15.0.css">
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.15.0.js"></script>
+    <script src="controller.js"></script>
+    
+    <script>
+
+        let numbers = [7, 3, 1, 5, 8];
+        let chosenBar = "ingen"; // Variabel for hvilken stolpe som er valgt
+        let inputValue = null; // Variabel for hva som er skrevet i input-feltet
+
+        function updateView(){};
+        
+        QUnit.test('test leggTilStolpe', function(assert){
+            inputValue = 8;
+            leggTilStolpe();
+
+            assert.equal(numbers.length, 6);
+            });
+        
+        QUnit.test('test endreStolpe', function(assert){
+            inputValue = 2;
+            chosenBar = 2;
+            endreStolpe();
+
+            assert.equal(numbers[1], 2);
+        });
+        
+        QUnit.test('test fjernStolpe', function(assert){
+            valgtStolpe(0);
+            fjernStolpe();
+
+            assert.equal(numbers.length, 5);
+        });
+
+        QUnit.test('test valgtStolpe', function(assert){
+            valgtStolpe(1);
+
+            assert.equal(chosenBar, 1);
+        });
+
+        QUnit.test('test2 valgtStolpe', function (assert) {
+            valgtStolpe(1);
+            valgtStolpe(1);
+
+            assert.equal(chosenBar, "ingen")
+        });
+    </script>
+
+    
+
+<!--Lag enhetstester av controller-funksjonene! Altså funksjonene for å:
+- velge stolpe (teste både velge den som er valgt og en annen) - valgtStolpe() - chosenBar
+- slette en stolpe - fjernStolpe ()
+- endre en stolpe - endreStolpe()
+- legge til en stolpe - leggTilStolpe()
+
+numbers.length - lengden på arrayet
+
+Eksempel:
+QUnit.test('denvalgte forander hvilken bar som er valgt', function (assert) {
+        denvalgte(1);
+        denvalgte(1);
+
+        assert.equal(chosenBar, "Ingen")
+      });
+-->
+</body>
+

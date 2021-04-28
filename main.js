@@ -4,12 +4,12 @@
  // model
  let numbers = [7, 3, 1, 5, 8];
  let chosenBar = "ingen"; // Variabel for hvilken stolpe som er valgt
- let inputValue; // Variabel for hva som er skrevet i input-feltet
+ let inputValue = null; // Variabel for hva som er skrevet i input-feltet
 
 
 
  // view
- updateView();
+ updateView()
  function updateView() {
      let svgInnerHtml = '';
      for (let i = 0; i < numbers.length; i++) {
@@ -50,35 +50,6 @@
  }
 
  // controller ligger i egen fil
-function valgtStolpe(barNo) {
-
-   chosenBar = barNo===chosenBar ? "ingen" : barNo;
-
-   updateView()
-}
-
- function leggTilStolpe() {
-
-    
-
-    updateView()
- }
-
- function endreStolpe() {
-
-
-
-    updateView()
- }
-
- function fjernStolpe() {
-
-    
-
-    updateView()
- }
-
-
 
 
 
@@ -107,3 +78,5 @@ Lag enhetstester av controller-funksjonene! Altså funksjonene for å:
 - slette en stolpe
 - endre en stolpe
 - legge til en stolpe */
+
+ /* variablename = (condition) ? value1:value2  */
