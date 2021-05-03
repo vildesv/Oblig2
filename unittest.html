@@ -21,6 +21,7 @@
             leggTilStolpe();
 
             assert.equal(numbers.length, 6);
+            assert.deepEqual(numbers, [7, 3, 1, 5, 8, 8]);
             });
         
         QUnit.test('test endreStolpe', function(assert){
@@ -32,10 +33,12 @@
         });
         
         QUnit.test('test fjernStolpe', function(assert){
-            valgtStolpe(0);
+            numbers = [7, 3, 1, 5, 8]
+            valgtStolpe(1);
             fjernStolpe();
 
-            assert.equal(numbers.length, 5);
+            assert.equal(numbers.length, 4);
+            assert.deepEqual(numbers, [3, 1, 5, 8])
         });
 
         QUnit.test('test valgtStolpe', function(assert){
@@ -45,8 +48,8 @@
         });
 
         QUnit.test('test2 valgtStolpe', function (assert) {
-            valgtStolpe(1);
-            valgtStolpe(1);
+            valgtStolpe(4);
+            valgtStolpe(4);
 
             assert.equal(chosenBar, "ingen")
         });

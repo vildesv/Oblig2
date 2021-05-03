@@ -11,7 +11,7 @@ function valgtStolpe(barNo) {
     
     // push
      if(inputValue <= 0 || inputValue >= 11) {
-         alert("Du har skrevet en ugyldig verdi. Prøv igjen.");
+         alert("Du har skrevet en ugyldi gverdi. Prøv igjen.");
      }
  
      else {
